@@ -41,7 +41,7 @@ public class StudentEmailService {
 
   public void sendCompletedRequestEmail(RequestCompleteEmailEntity penRequest) {
     String loginUrl = getLoginUrl(penRequest);
-    log.debug("Sending completed PEN email");
+    log.debug("Sending completed PEN email ");
     sendEmail(penRequest, MessageFormat.format(props.getEmailTemplateCompletedRequest().replace("'", "''"), penRequest.getFirstName(), loginUrl, loginUrl, loginUrl), PERSONAL_EDUCATION_NUMBER_PEN_REQUEST);
     log.debug("Completed PEN email sent successfully");
   }
